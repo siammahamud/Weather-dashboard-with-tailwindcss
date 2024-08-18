@@ -15,25 +15,15 @@
   </head>
 
   <body>
-    <!-- <div class="bg-slate-300">
-
-<i class="fa-solid fa-cloud-sun"></i>
-<i class="fa-solid fa-location-dot"></i>
-<i class="fa-solid fa-temperature-three-quarters"></i>
-<i class="fa-solid fa-temperature-half"></i>
-<i class="fa-solid fa-droplet "></i>
-<i class="fa-solid fa-cloud"></i>
-<i class="fa-solid fa-wind"></i>
-
-
-    </div> -->
+    <!-- wrapper  -->
     <div
       style="
         background-image: url(./assets/images/sky.jpg);
         background-size: cover;
       "
-      class="w-full h-[100vh] py-6 px-[8%]"
+      class="w-full h-[100vh] py-6 px-[8%] relative"
     >
+    <!-- logo and search box -->
       <div class="flex items-center justify-between">
         <div
           class="bg-indigo-500 p-1 flex flex-col w-8 items-center rounded-md"
@@ -47,7 +37,8 @@
             <div class="w-4 h-1 bg-green-400"></div>
           </span>
         </div>
-        <div class="relative w-[35%]">
+        <!-- search -bar  -->
+        <div class="relative w-1/2 md:w-[35%]">
           <input
             type=" text"
             class="w-full px-6 py-1 rounded-md focus:outline-none focus:ring-2 ring-indigo-600"
@@ -57,25 +48,65 @@
           ></i>
         </div>
       </div>
-
-      <div class="p-12 bg-white/20 backdrop-blur-md text-gray-600">
-        <div>
-            <i class="fa-solid fa-cloud-sun-rain "></i>
-            <h1>25°</h1>
-            <h2 class="flex">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Panchagarh</p>
-            </h2>
-            <p class="" id="dateTime">Date and Time</p>
-
+    <!-- floating weather-dashboard card  -->
+      <!-- card container -->
+      <div
+        class="mt-12 p-12 bg-white/20 backdrop-blur-md text-black flex flex-col md:flex-row gap-8 justify-between h-[80%] md:h-[60%] rounded-md w-full md:w-4/6 lg:w-3/5 md:absolute top-[10%] right-[5%]"
+      >
+      <!-- left side content:date and time  -->
+        <div class="text-3xl">
+          <i class=" fa-solid fa-cloud-sun-rain"></i>
+          <h1>25°</h1>
+          <h2 class="flex">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Panchagarh</p>
+          </h2>
+          <p class="" id="dateTime">Date and Time</p>
         </div>
-        <div></div>
-
-
+      <!-- right side content  -->
+        <div>
+          <ol class="text-lg md:text-xl lg:text-2xl font-semibold space-y-3 md:space-y-6">
+            <li class="flex justify-between text-xl md:text-3xl font-bold">THE CLIMATE IS MIST</li>
+            <li class="flex justify-between">
+              <p>Temp Max</p>
+              <span class="flex items-center gap-4">
+                <p>25.93°</p>
+                <i
+                  class="text-red-600 fa-solid fa-temperature-three-quarters"
+                ></i>
+              </span>
+            </li>
+            <li class="flex justify-between">
+              <p>Temp Min</p>
+              <span class="flex items-center gap-4">
+                <p>17.93°</p>
+                <i class="text-blue-600 fa-solid fa-temperature-half"></i>
+              </span>
+            </li>
+            <li class="flex justify-between">
+              <p>Humidity</p>
+              <span class="flex items-center gap-4">
+                <p>51%</p>
+                <i class="fa-solid fa-droplet"></i>
+              </span>
+            </li>
+            <li class="flex justify-between">
+              <p>Cloudy</p>
+              <span class="flex items-center gap-4">
+                <p>2%</p>
+                <i class="fa-solid fa-cloud"></i>
+              </span>
+            </li>
+            <li class="flex justify-between">
+              <p>Wind</p>
+              <span class="flex items-center gap-4">
+                <p>3.6 Km/h</p>
+                <i class="fa-solid fa-wind"></i>
+              </span>
+            </li>
+          </ol>
+        </div>
       </div>
-
-
-
     </div>
     <script src="./script.js"></script>
   </body>
