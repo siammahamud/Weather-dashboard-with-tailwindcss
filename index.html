@@ -21,52 +21,82 @@
         background-image: url(./assets/images/sky.jpg);
         background-size: cover;
       "
-      class="w-full h-[100vh] py-6 px-[8%] relative"
+      class="w-full h-[100vh] py-6 px-[8%] relative contrast-[.90]"
     >
-    <!-- logo and search box -->
+      <!-- logo and search box -->
       <div class="flex items-center justify-between">
-        <div
-          class="bg-indigo-500 p-1 flex flex-col w-8 items-center rounded-md"
-        >
-          <span>
-            <i class="text-white fa-solid fa-cloud"></i>
-          </span>
-          <span>
-            <div class="w-4 h-1 bg-green-400"></div>
-            <div class="w-4 h-1 bg-red-400"></div>
-            <div class="w-4 h-1 bg-green-400"></div>
-          </span>
+        <!-- logo  -->
+        <div class="flex items-center text-lg font-bold text-white gap-2 w-28">
+          <div
+            class="bg-indigo-500 p-1 flex flex-col w-8 items-center rounded-md"
+          >
+            <span>
+              <i class="text-white fa-solid fa-cloud"></i>
+            </span>
+            <span>
+              <div class="w-4 h-1 bg-green-400"></div>
+              <div class="w-4 h-1 bg-red-400"></div>
+              <div class="w-4 h-1 bg-green-400"></div>
+            </span>
+          </div>
+          <!-- logo text  -->
+          <h1
+            class="hidden md:block bg-gradient-to-r from-indigo-800 via-red-600 to-violet-700 bg-clip-text text-transparent drop-shadow-[0_1px_3px_white]"
+          >
+            WEATHER DASHBOARD
+          </h1>
         </div>
         <!-- search -bar  -->
         <div class="relative w-1/2 md:w-[35%]">
           <input
+            placeholder="Search Location"
             type=" text"
-            class="w-full px-6 py-1 rounded-md focus:outline-none focus:ring-2 ring-indigo-600"
+            class="bg-gradient-to-r from-sky-300 w-full px-6 py-1 rounded-md focus:outline-none focus:ring-2 ring-indigo-600 drop-shadow-md"
           />
           <i
-            class="bg-blue-200 p-2 absolute top-0 right-0 fa-solid rounded-r-md fa-magnifying-glass"
+            class="text-black p-2 absolute top-0 right-0 fa-solid rounded-r-md fa-magnifying-glass"
           ></i>
         </div>
       </div>
-    <!-- floating weather-dashboard card  -->
+      <!-- floating weather-dashboard card  -->
       <!-- card container -->
       <div
-        class="mt-12 p-12 bg-white/20 backdrop-blur-md text-black flex flex-col md:flex-row gap-8 justify-between h-[80%] md:h-[60%] rounded-md w-full md:w-4/6 lg:w-3/5 md:absolute top-[10%] right-[5%]"
+        class="mt-16 md:mt-0 p-12 bg-black/15 backdrop-blur-md text-black flex flex-col md:flex-row gap-8 justify-between h-[70%] md:h-[60%] lg:h-[70%] rounded-md w-full md:w-5/6 lg:w-3/5 md:absolute top-[15%] right-[5%] items-center"
       >
-      <!-- left side content:date and time  -->
-        <div class="text-3xl">
-          <i class=" fa-solid fa-cloud-sun-rain"></i>
-          <h1>25°</h1>
-          <h2 class="flex">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Panchagarh</p>
-          </h2>
-          <p class="" id="dateTime">Date and Time</p>
+        <!-- left side content:date and time  -->
+        <div class="space-y-2 md:space-y-8">
+          <span class="flex md:flex-col gap-5">
+            <span class="flex">
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+              <h1
+                class="text-4xl md:text-5xl font-bold lg:text-6xl text-cyan-200"
+              >
+                25°
+              </h1>
+            </span>
+            <h2 class="flex text-3xl lg:text-5xl">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>Panchagarh</p>
+            </h2>
+          </span>
+
+          <p
+            class="text-center md:text-left font-semibold text-base md:text-lg"
+            id="dateTime"
+          >
+            Date and Time
+          </p>
         </div>
-      <!-- right side content  -->
+        <!-- right side content  -->
         <div>
-          <ol class="text-lg md:text-xl lg:text-2xl font-semibold space-y-3 md:space-y-6">
-            <li class="flex justify-between text-xl md:text-3xl font-bold">THE CLIMATE IS MIST</li>
+          <ol
+            class="text-lg md:text-xl lg:text-2xl font-semibold space-y-3 md:space-y-6"
+          >
+            <li
+              class="flex justify-between text-xl md:text-xl lg:text-2xl font-bold text-red-500"
+            >
+              THE CLIMATE IS MIST
+            </li>
             <li class="flex justify-between">
               <p>Temp Max</p>
               <span class="flex items-center gap-4">
@@ -108,6 +138,7 @@
         </div>
       </div>
     </div>
+    <!-- script -->
     <script src="./script.js"></script>
   </body>
 </html>

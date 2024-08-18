@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  i {
+    @apply text-transparent bg-gradient-to-b bg-clip-text  from-white to-red-400;
+  }
+  p {
+    @apply text-white;
+  }
+}
